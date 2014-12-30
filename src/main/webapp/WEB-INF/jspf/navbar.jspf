@@ -1,0 +1,17 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+
+</head>
+<body>
+	<div class="container">
+		<ul class="nav nav-tabs nav-justified">
+			<li><a href="<c:url value="/journeys"><c:param name="action" value="journeys" /></c:url>">Podróże</a></li>
+			<li><a href="<c:url value="/account"><c:param name="action" value="account" /></c:url>">Konto</a></li>
+			<li><a href="<c:url value="/about"><c:param name="action" value="about" /></c:url>">O Stronie</a></li>
+			<li><a href="<c:url value="/map"><c:param name="action" value="map" /></c:url>">Mapa</a></li>
+			<li><a href="<c:url value="/contact"><c:param name="action" value="contact" /></c:url>">Kontakt</a></li>
+		</ul>
+		<div class="col-xs-12 header-img-container">
+
+
+			<img class="header-img" src="${pageContext.request.contextPath}/images/top.png" height="305px" width="1265px" alt="edit" />
+		</div>

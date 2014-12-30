@@ -1,0 +1,110 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+
+<c:if test="${item.getSports().isBieganie()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/runningEmp.png" alt="Bieganie" />
+</c:if>
+<c:if test="${item.getSports().isJazda_konna()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/horseRidingEmp.png" alt="Jazda Konna" />
+</c:if>
+<c:if test="${item.getSports().isLucznictwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/archeryEmp.png" alt="Łucznictwo" />
+</c:if>
+<c:if test="${item.getSports().isBabington()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/badmintonEmp.png" alt="Babington" />
+</c:if>
+<c:if test="${item.getSports().isBaseball()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/baseballEmp.png" alt="Baseball" />
+</c:if>
+<c:if test="${item.getSports().isKoszykowka()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/basketballEmp.png" alt="Koszykówka" />
+</c:if>
+<c:if test="${item.getSports().isJazda_rowerem()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/bicycleEmp.png" alt="Jazda Rowerem" />
+</c:if>
+<c:if test="${item.getSports().isKajakarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/canoeingEmp.png" alt="Kajakarstwo" />
+</c:if>
+<c:if test="${item.getSports().isWspinaczka()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/climbingEmp.png" alt="Wspinaczka" />
+</c:if>
+<c:if test="${item.getSports().isTaniec()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/dancingEmp.png" alt="Taniec" />
+</c:if>
+<c:if test="${item.getSports().isNurkowanie()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/divingEmp.png" alt="Nurkowanie" />
+</c:if>
+<c:if test="${item.getSports().isSzermierka()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/fencingEmp.png" alt="Szermierka" />
+</c:if>
+<c:if test="${item.getSports().isWedkarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/fishingEmp.png" alt="Wędkarstwo" />
+</c:if>
+<c:if test="${item.getSports().isPilka_nozna()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/footballEmp.png" alt="Piłka Nożna" />
+</c:if>
+<c:if test="${item.getSports().isGeocaching()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/geocachingEmp.png" alt="Geocaching" />
+</c:if>
+<c:if test="${item.getSports().isGolf()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/golfEmp.png" alt="Golf" />
+</c:if>
+<c:if test="${item.getSports().isHokey()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/hockeyEmp.png" alt="Hokey" />
+</c:if>
+<c:if test="${item.getSports().isLyzwiarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/iceEmp.png" alt="Łyżwiarstwo" />
+</c:if>
+<c:if test="${item.getSports().isSztuki_walki()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/martial artsEmp.png" alt="Sztuki Walki" />
+</c:if>
+<c:if test="${item.getSports().isMedytacja()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/meditationEmp.png" alt="Medytacja" />
+</c:if>
+<c:if test="${item.getSports().isSpadochroniarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/paratrooperEmp.png" alt="Spadachroniarstwo" />
+</c:if>
+<c:if test="${item.getSports().isPolo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/poloEmp.png" alt="Polo" />
+</c:if>
+<c:if test="${item.getSports().isWioslarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/rowingEmp.png" alt="Wioslarstwo" />
+</c:if>
+<c:if test="${item.getSports().isStrzelectwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/shootingEmp.png" alt="Strzelectwo" />
+</c:if>
+<c:if test="${item.getSports().isSkateboarding()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/skatingEmp.png" alt="Skating" />
+</c:if>
+<c:if test="${item.getSports().isRolkarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/skating1Emp.png" alt="Skating1" />
+</c:if>
+<c:if test="${item.getSports().isNarciarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/skiingEmp.png" alt="Skiing" />
+</c:if>
+<c:if test="${item.getSports().isSnowboarding()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/snowboardingEmp.png" alt="Snowboarding" />
+</c:if>
+<c:if test="${item.getSports().isSurfing()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/surfer1Emp.png" alt="Surfer" />
+</c:if>
+<c:if test="${item.getSports().isPlywanie()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/swimmingEmp.png" alt="Pływanie" />
+</c:if>
+<c:if test="${item.getSports().isTennis()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/tennisEmp.png" alt="Tennis" />
+</c:if>
+<c:if test="${item.getSports().isTrekking()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/trekkingEmp.png" alt="Trekking" />
+</c:if>
+<c:if test="${item.getSports().isVolleyball()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/vollelballEmp.png" alt="Volleball" />
+</c:if>
+<c:if test="${item.getSports().isChodzenie()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/walkingEmp.png" alt="Walking" />
+</c:if>
+<c:if test="${item.getSports().isPodnoszenie()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/weightliftingEmp.png" alt="Podnoszenie Cięzarów" />
+</c:if>
+<c:if test="${item.getSports().isZeglarstwo()}">
+	<img class="img-rounded journey-image" src="${pageContext.request.contextPath}/images/sports/zeglarstwoEmp.png" alt="Zeglarstwo" />
+</c:if>

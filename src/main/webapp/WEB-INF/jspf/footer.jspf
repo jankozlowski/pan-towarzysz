@@ -1,0 +1,17 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<div class="row" id="footer">
+	<div class="col-xs-12 myBackground" style="text-align: center">
+
+		<span style="margin-right:450px">Strona: http://pan-towarzysz.rhcloud.com/</span> <span style="margin-right:40px">email: pan-towarzysz@wp.pl</span><br /> <span style="margin-right:550px;margin-top:20px">Telefon: 514-393-032</span> Skontaktuj się <a href="<c:url value="/contact"><c:param name="action" value="contact" /></c:url>">tutaj</a><br />
+		<br /> © 2014 Pan-Towarzysz. All rights Reserved
+
+	</div>
+</div>
+
+<script>
+	$.backstretch("${pageContext.request.contextPath}/images/background.png");
+</script>
+
+</div>
+</body>
+</html>

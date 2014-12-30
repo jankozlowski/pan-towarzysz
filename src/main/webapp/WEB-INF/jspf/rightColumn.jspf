@@ -1,0 +1,136 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+
+<div class="col-xs-3 myRightBar">
+	<form class="form-horizontal myBackground" role="form" method="post" style="padding: 10px">
+		<input type="hidden" name="option" value="search" />
+		<p>
+			<b>Szukanie</b>
+		</p>
+		<div class="form-group">
+
+			<div class="col-xs-9">
+
+				<input type="text" class="form-control input-large" placeholder="Szukanie" name="searching" />
+			</div>
+			<div class="col-xs-2 nopadding">
+				<button type="submit" class="btn btn-default">Szukaj</button>
+				<br />
+			</div>
+			<div class="col-xs-12" style="margin-top: 10px">
+
+				<input style="float: right" type="checkbox" name="zawansowaneSzukanie" id="zawansowaneSzukanie" />
+				<span style="float: right; margin-right: 20px">Szukanie zawansowane</span>
+
+			</div>
+
+			<div class="col-xs-12" id="appendSzukanie" style="display: none">
+				<input type='checkbox' name='alfabetycznie' />
+				<span> Sortuj alfabetycznie</span><br />
+				<input type='checkbox' name='wedlugDaty' id='wedlugDaty' />
+				<span> Sortuj według Daty</span><br />
+				<div class="col-xs-4 nopadding" style="margin-top: 10px">
+					<p>Pokaż tylko:</p>
+				</div>
+				<div class="col-xs-7 nopadding" style="margin-top: 10px">
+					<select name="state" id="state">
+						<option value="wszystkie">wszystkie</option>
+						<option value="oczekuje">oczekujące</option>
+						<option value="w trakcie">w trakcie</option>
+						<option value="ukonczony">ukończone</option>
+					</select>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="col-xs-4 nopadding" style="margin-top: 5px; float: left">
+						<p>Pokaż tylko:</p>
+					</div>
+					<div class="col-xs-7 nopadding" style="margin-top: 5px">
+
+						<select name="rodzaj" id="rodzaj">
+							<option value="wszystkie">wszystkie</option>
+							<option value="bieg">babington</option>
+							<option value="baseball">baseball</option>
+							<option value="bieganie">bieganie</option>
+							<option value="chodzenie">chodzenie</option>
+							<option value="geocaching">geocaching</option>
+							<option value="golf">golf</option>
+							<option value="hokey">hokei</option>
+							<option value="jazda_konna">jazda konna</option>
+							<option value="kajakarstwo">kajakarstwo</option>
+							<option value="koszykowka">koszykówka</option>
+							<option value="lucznictwo">łucznictwo</option>
+							<option value="lyzwiarstwo">łyżwiarstwo</option>
+							<option value="medytacja">medytacja</option>
+							<option value="narciarstwo">narciarstwo</option>
+							<option value="nurkowanie">nurkowanie</option>
+							<option value="pilka_nozna">piłka nożna</option>
+							<option value="plywanie">pływanie</option>
+							<option value="podnoszenie">podnoszenie ciężarów</option>
+							<option value="rolkarstwo">rolkarstwo</option>
+							<option value="volleyball">siatkówka</option>
+							<option value="skateboarding">skateboarding</option>
+							<option value="snowboarding">snowboarding</option>
+							<option value="spadochroniarstwo">spadochroniarstwo</option>
+							<option value="strzelectwo">strzelectwo</option>
+							<option value="surfing">surfing</option>
+							<option value="szermierka">szermierka</option>
+							<option value="sztuki_walki">sztuki walki</option>
+							<option value="taniec">taniec</option>
+							<option value="tennis">tennis</option>
+							<option value="trekking">trekking</option>
+							<option value="wedkarstwo">wędkarstwo</option>
+							<option value="wioslarstwo">wioślarstwo</option>
+							<option value="wspinaczka">wspinaczka</option>
+							<option value="zeglarstwo">żeglarstwo</option>
+
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<c:if test="${sessionScope.user==null}">
+		<div class="col-xs-12 myBackground myMargin">
+
+			<p>
+				<b>Logowanie</b>
+			</p>
+			<a href="<c:url value="/login"><c:param name="action" value="login"></c:param></c:url>">Zaloguj</a><br /> <a href="<c:url value="/register"><c:param name="action" value="register"></c:param></c:url>">Zarejestruj</a><br />
+		</div>
+	</c:if>
+
+	<c:if test="${sessionScope.user!=null}">
+		<div class="col-xs-12 myBackground myMargin">
+			<p>
+				<b>Panel Administracyjny</b>
+			</p>
+
+			<a href="<c:url value="/addJourney"><c:param name="action" value="addJourney" /></c:url>">Dodaj Podróż</a><br /> <a href="<c:url value="/account"><c:param name="action" value="account" /></c:url>">Edytuj konto</a><br /> <a
+				href=" <c:url value="/index"><c:param name="action" value="deleteCookie" /></c:url>">Wyloguj</a><br />
+
+		</div>
+	</c:if>
+	<div class="col-xs-12 myBackground myMargin">
+		<p>
+			<b>Newsletter</b>
+		</p>
+		<form id="newsletterForm" class="form-horizontal" role="form" method="post">
+			<input type="hidden" name="option" value="letter" />
+			<div class="form-group">
+				<div class="col-xs-8">
+
+					<input type="text" class="form-control" placeholder="Newsletter" name="email">
+				</div>
+				<button type="submit" class="btn btn-default" style="float: right; margin-right: 10px">&thinsp;Zapisz się</button>
+			</div>
+			<c:if test="${sucess==true}">
+				<p>Email zapisany do newsletera</p>
+			</c:if>
+			<c:if test="${sucess==false}">
+				<p>Podany adres istnieje już w bazie</p>
+			</c:if>
+		</form>
+	</div>
+</div>
+
+</div>
