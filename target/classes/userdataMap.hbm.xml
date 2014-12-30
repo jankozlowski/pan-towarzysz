@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.TheLongestJourney.UserData" table="UserData">
+<id name="data_id" column="data_id" type="integer">
+<generator class="assigned"></generator></id>
+<one-to-one name="userObject" class="com.TheLongestJourney.User" constrained="true"></one-to-one>
+<property name="user" column="user" type="string" not-null="true" unique="true"></property>
+<property name="email" column="email" type="string" not-null="true" unique="true"></property>
+<property name="name" column="name" type="string"></property>
+<property name="surname" column="surname" type="string"></property>
+<property name="gender" column="gender" type="boolean" not-null="true"></property>
+<property name="age" column="age" type="integer"></property>
+<property name="photo" column="photo" type="string"></property>
+<property name="about" column="about" type="string"></property>
+<property name="phone" column="phone" type="long"></property>
+<many-to-one name="sport" class="com.TheLongestJourney.Sports" column="sport_id" cascade="all" not-null="true" />
+</class>
+</hibernate-mapping>

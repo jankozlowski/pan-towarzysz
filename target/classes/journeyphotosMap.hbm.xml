@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.TheLongestJourney.JourneyPhotos" table="journeyPhotos">
+<id name="id" column="photoId" type="integer">
+<generator class="increment"></generator>
+</id>
+<many-to-one name="journey" class="com.TheLongestJourney.Journey" fetch="select">
+            <column name="id_journey" not-null="true" />
+        </many-to-one>
+
+<property name="photo" column="photoName" type="string"></property>
+
+</class>
+</hibernate-mapping>

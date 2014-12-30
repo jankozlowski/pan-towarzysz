@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.TheLongestJourney.Place" table="place">
+<id name="id" column="id_journey" type="integer">
+		<generator class="foreign">
+				<param name="property">journeyObject</param>
+			</generator></id>
+<one-to-one name="journeyObject" class="com.TheLongestJourney.Journey" constrained="true"></one-to-one>
+<property name="latitude" column="latitude" type="double"></property>
+<property name="longitude" column="longitude" type="double"></property>
+<property name="place" column="place" type="string"></property>
+</class>
+</hibernate-mapping>

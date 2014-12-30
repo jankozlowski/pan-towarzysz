@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.TheLongestJourney.User" table="users">
+	<id name="user_id" column="user_id" type="integer">
+			<generator class="increment"></generator>
+	</id>
+	<property name="user" column="user" type="string" not-null="true" unique="true"></property>
+	<property name="email" column="email" type="string" not-null="true" unique="true"></property>
+	<property name="password" column="password" type="string" not-null="true"></property>
+	<property name="stempel" column="stempel" type="org.jadira.usertype.dateandtime.joda.PersistentDateTime" />
+	<one-to-one name="userDataObject" class="com.TheLongestJourney.UserData" cascade="save-update"></one-to-one>
+</class>
+</hibernate-mapping>

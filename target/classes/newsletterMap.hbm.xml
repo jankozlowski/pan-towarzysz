@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.TheLongestJourney.Newsletter" table="newsletter">
+<id name="id" column="news_id" type="integer">
+<generator class="increment"></generator></id>
+<property name="email" column="email" type="string"></property>
+<property name="stempel" column="stempel" type="org.jadira.usertype.dateandtime.joda.PersistentDateTime" />
+
+</class>
+
+
+
+</hibernate-mapping>
