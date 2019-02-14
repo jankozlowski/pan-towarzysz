@@ -1,5 +1,5 @@
 Source code for pan-towarzysz Project:
-http://pan-towarzysz.rhcloud.com
+https://pan-towarzysz.herokuapp.com
 
 <img src="http://binaryalchemist.pl/wp-content/uploads/2017/08/pantowarzysz0.png" alt="pan towarzysz"/>
 <img src="http://binaryalchemist.pl/wp-content/uploads/2017/08/pantowarzysz.png" alt="pan towarzysz"/>
